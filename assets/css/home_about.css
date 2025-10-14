@@ -1,0 +1,188 @@
+/* === Overlay Section === */
+
+.overlay-section-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay-section-image {
+  width: 100%;
+  height: 79vh;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Darken full image */
+
+.overlay-section-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 1;
+}
+
+/* Gradient overlay at bottom */
+
+.overlay-section-container::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.95));
+  z-index: 2;
+}
+
+.overlay-section-container-top::before {
+  content: "";
+  position: absolute;
+  /*top: 0;*/
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to top, transparent, rgba(0, 0, 0, 0.95));
+  z-index: 2;
+}
+
+/* Make the background image grayscale */
+
+.overlay-section-container img {
+  width: 100%;
+  height: 90vh;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  /*filter: grayscale(100%);*/
+  transition: filter 0.3s ease;
+}
+
+/* Return to normal color on hover */
+
+.overlay-section-container:hover img {
+  filter: grayscale(0%);
+}
+
+/* Text + Button container */
+
+.overlay-section-content {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  color: #fff;
+  z-index: 3;
+  text-align: left;
+  max-width: 600px;
+}
+
+.overlay-section-title {
+  margin: 0 0 10px;
+}
+
+.overlay-section-text {
+  margin-bottom: 20px;
+  padding-right: 20px;
+  text-align: justify;
+}
+
+.overlay-section-btn {
+  background-color: #ffcb05;
+  color: #000;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.overlay-section-btn:hover {
+  background-color: #05fc4a;
+}
+
+/* === MEDIA QUERIES === */
+
+/* Large screens (default font size) */
+
+@media (min-width: 1200px) {
+  .overlay-section-title {
+    font-size: 3rem;
+    letter-spacing: 2px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .overlay-section-text {
+    font-size: 1.1rem;
+  }
+}
+
+/* Medium screens */
+
+@media (max-width: 992px) {
+  .overlay-section-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .overlay-section-text {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .overlay-section-btn {
+    padding: 10px 25px;
+  }
+}
+
+/* Small screens */
+
+@media (max-width: 768px) {
+  .overlay-section-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .overlay-section-text {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .overlay-section-content {
+    left: 7%;
+  }
+}
+
+/* Extra small screens */
+
+@media (max-width: 576px) {
+  .overlay-section-title {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .overlay-section-text {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .overlay-section-content {
+    left: 5%;
+  }
+}
+

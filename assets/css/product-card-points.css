@@ -1,0 +1,235 @@
+:root {
+  /*--currencyPrefix: "$";*/
+}
+
+.productPack_contenedorCards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  box-sizing: border-box;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #666;
+}
+
+.productPack_contenedorCards .productPack_card {
+  width: 300px;
+  transition: ease all .3s;
+}
+
+.productPack_contenedorCards .productPack_card.esFav .productPack_wrapper2 .productPack_infoProd .productPack_actions .productPack_action.productPack_aFavs {
+  transform: rotateX(360deg) scale(1.2);
+}
+
+.productPack_contenedorCards .productPack_card.esFav .productPack_wrapper2 .productPack_infoProd .productPack_actions .productPack_action.productPack_aFavs svg path, .productPack_contenedorCards .productPack_card.esFav .productPack_wrapper2 .productPack_infoProd .productPack_actions .productPack_action.productPack_aFavs svg circle {
+  fill: #fff;
+  transition-delay: .2s;
+}
+
+.productPack_contenedorCards .productPack_card.enCarrito .productPack_wrapper2 .productPack_infoProd .productPack_actions .productPack_action.productPack_alCarrito .inCart {
+  transform: scale(1);
+}
+
+.productPack_contenedorCards .productPack_card.enCarrito .productPack_wrapper2 .productPack_infoProd .productPack_actions .productPack_action.productPack_alCarrito .outCart {
+  transform: scale(0);
+}
+
+.productPack_contenedorCards .productPack_card .productPack_wrapper2 {
+  margin: 60px 10px 10px 10px;
+  padding-top: 300px;
+  box-sizing: border-box;
+  position: relative;
+  box-shadow: 0 0 20px 10px rgba(29, 29, 29, 0.1);
+  transition: ease all .3s;
+  background: #fff;
+}
+
+.productPack_contenedorCards .productPack_card .productPack_wrapper2:hover {
+  transform: translateY(-10px);
+}
+
+.productPack_contenedorCards .productPack_card .productPack_wrapper2:hover .productPack_imgProd {
+  height: 350px;
+}
+
+.productPack_contenedorCards .productPack_card .productPack_wrapper2 .productPack_colorProd {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background-color: #b82d44;
+}
+
+.productPack_contenedorCards .productPack_card .productPack_wrapper2 .productPack_imgProd {
+  background-size: contain;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: calc(100% - 180px);
+  width: 100%;
+  height: 300px;
+  transition: ease all .3s;
+}
+
+.productPack_contenedorCards .productPack_card .productPack_wrapper2 .productPack_infoProd {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  height: 180px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.productPack_contenedorCards .productPack_card .productPack_wrapper2 .productPack_infoProd p {
+  width: 100%;
+  font-size: 14px;
+  text-align: center;
+  color: #666;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.productPack_contenedorCards .productPack_card .productPack_wrapper2 .productPack_infoProd .productPack_nombreProd {
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  color: #000000;
+}
+
+.productPack_contenedorCards .productPack_card .productPack_wrapper2 .productPack_infoProd .extraInfo {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  color: #2c2c2c;
+}
+
+.productPack_contenedorCards .productPack_card .productPack_wrapper2 .productPack_infoProd .productPack_actions {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  align-content: center;
+  width: 100%;
+  margin-top: auto;
+  padding-top: 10px;
+}
+
+.productPack_contenedorCards .productPack_card .productPack_wrapper2 .productPack_infoProd .productPack_actions .productPack_preciosGrupo {
+  flex-grow: 1;
+  position: relative;
+}
+
+.productPack_contenedorCards .productPack_card .productPack_wrapper2 .productPack_infoProd .productPack_actions .productPack_preciosGrupo .productPack_precio {
+  font-family: "montserrat", sans-serif;
+  color: #1d1d1d;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.productPack_contenedorCards .productPack_card .productPack_wrapper2 .productPack_infoProd .productPack_actions .productPack_preciosGrupo .productPack_precio:before {
+  content: var(--currencyPrefix);
+  font-size: 20px;
+}
+
+.productPack_contenedorCards .productPack_card .productPack_wrapper2 .productPack_infoProd .productPack_actions .productPack_preciosGrupo .productPack_precio.productPack_precioOferta {
+  position: absolute;
+  left: 0;
+  top: -30px;
+  color: #0e960b;
+  font-size: 20px;
+}
+
+.productPack_contenedorCards .productPack_card .productPack_wrapper2 .productPack_infoProd .productPack_actions .productPack_preciosGrupo .productPack_precio.productPack_precioOferta:before {
+  font-size: 12px;
+}
+
+.productPack_contenedorCards .productPack_card .productPack_wrapper2 .productPack_infoProd .productPack_actions .productPack_action {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  margin-left: 15px;
+  width: 35px;
+  height: 35px;
+  position: relative;
+  transition: cubic-bezier(0.68, -0.55, 0.27, 1.55) all .3s;
+  cursor: pointer;
+  color: #1d1d1d;
+  top: -25px;
+}
+
+.productPack_contenedorCards .productPack_card .productPack_wrapper2 .productPack_infoProd .productPack_actions .productPack_action svg {
+  position: absolute;
+  transition: cubic-bezier(0.68, -0.55, 0.27, 1.55) all .3s;
+}
+
+.productPack_contenedorCards .productPack_card .productPack_wrapper2 .productPack_infoProd .productPack_actions .productPack_action svg path, .productPack_contenedorCards .productPack_card .productPack_wrapper2 .productPack_infoProd .productPack_actions .productPack_action svg circle {
+  stroke: currentColor;
+  fill: transparent;
+  transition: ease all .3s;
+}
+
+.productPack_contenedorCards .productPack_card .productPack_wrapper2 .productPack_infoProd .productPack_actions .productPack_action.productPack_aFavs {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1;
+  width: 25px;
+  height: 25px;
+  color: #fff;
+}
+
+.productPack_contenedorCards .productPack_card .productPack_wrapper2 .productPack_infoProd .productPack_actions .productPack_action.productPack_alCarrito svg.inCart {
+  transform: scale(0);
+}
+
+.productPack_card {
+  background: transparent;
+  border: transparent;
+}
+
+.productPack_perksDescription {
+  font-size: 15px !important;
+  text-align: start !important;
+  color: #1a1a1a !important;
+}
+
+.productPack_icono.productPack_action.productPack_alCarrito i {
+  font-size: 40px !important;
+  color: #000000;
+  transition: transform 0.2s ease, color 0.2s ease;
+  cursor: pointer;
+  padding-right: 20px;
+}
+
+.productPack_icono.productPack_action.productPack_alCarrito i:hover {
+  color: #002ed0;
+}
+
+.productPack_wrapper2 {
+  padding-top: 170px!important;
+}
+
+.productPack_colorProd {
+  height: 120px!important;
+}
+
