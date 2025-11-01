@@ -59,21 +59,6 @@
   gap: 10px;
 }
 
-#background {
-  height: 100vh;
-  background: url("../../assets/img/aviation_parallax_3.png") center / cover;
-}
-
-#content {
-  height: 100vh;
-  background: url("../../assets/img/logo_image_background.png") center / cover;
-}
-
-#mask {
-  mask: url("../../assets/img/mask_logo_2.svg") no-repeat center;
-  mask-size: 10000%;
-}
-
 #overlay {
   background: #ffffff;
   width: 100%;
@@ -131,13 +116,5 @@
     font-size: 14px;
     transition: all 0.3s ease;
   }
-}
-
-#img-ahmed-imran-khan {
-  /*margin-inline: 150px;*/
-}
-
-#img-ryuujin-onizuka {
-  margin-inline-start: 900px;
 }
 

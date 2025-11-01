@@ -30,6 +30,10 @@ th, td {
   color: #75b798!important;
 }
 
+#changelog_date {
+  color: #469bff!important;
+}
+
 #table_heading {
   color: #ffc107!important;
 }
@@ -41,5 +45,11 @@ th, td {
 #rules_thanks_section {
   padding-bottom: 80px;
   background: #121212;
+}
+
+@media (max-width: 576px) {
+  #rules_thanks_section {
+    font-size: 12px!important;
+  }
 }
 

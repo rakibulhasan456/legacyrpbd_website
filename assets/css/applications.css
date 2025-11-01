@@ -190,3 +190,12 @@ a.animated-button.btn.btn-sm::before {
   align-items: center;
 }
 
+.card-container_application {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 0px!important;
+  margin-bottom: 50px!important;
+}
+
